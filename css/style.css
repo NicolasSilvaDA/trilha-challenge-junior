@@ -3,3 +3,41 @@
     margin: 0;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.25rem;
+}
+
+.padding-page {
+    padding: 30px 160px;
+}
+
+.black-bg {
+    background-color: rgb(25, 25, 25);
+}
+
+.links {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#header-navbar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+#logo {
+    max-width: 80%;
+}
+
+#header-button1 {
+    padding: 10px 30px;
+    border-radius: 18px;
+    border: none;
+    color: rgb(25, 25, 25);
+    background-color: aquamarine;
+    font-size: 80%;
+    /* font-weight: 600; */
+}
