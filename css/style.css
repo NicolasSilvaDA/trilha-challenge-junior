@@ -9,7 +9,7 @@ body {
 }
 
 .padding-page {
-    padding: 30px 160px;
+    padding: 60px 160px;
 }
 
 .black-bg {
@@ -25,6 +25,10 @@ body {
     font-size: 0.95rem;
     font-weight: bold;
 }
+
+/* .content-section {
+
+} */
 
 .collaborate-element {
     padding: 12px 0;
@@ -106,4 +110,40 @@ body {
 #collaborate-img2 {
     background: linear-gradient(red, darkred);
     z-index: 2;
+}
+
+#about-block-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#about-img1 {
+    width: 100%;
+    height: 100%;
+    background-image:url("../static/about-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+}
+
+#about-block2 {
+    padding: 0 48px;
+}
+
+#about-h1 {
+    margin-bottom: 12px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#about-p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+#about-btn {
+    margin-top: 16px;
+    padding: 16px 48px;
+    border-radius: 24px;
 }
