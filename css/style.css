@@ -26,6 +26,11 @@ body {
     font-weight: bold;
 }
 
+.block-wrap {
+    padding: 30px 0;
+    display: grid;
+}
+
 /* .content-section {
 
 } */
@@ -71,8 +76,6 @@ body {
 } */
 
 #collaborate-block-wrap {
-    padding: 30px 0;
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     gap: 12px;
@@ -113,7 +116,6 @@ body {
 }
 
 #about-block-wrap {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
