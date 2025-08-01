@@ -46,6 +46,21 @@ body {
     position: absolute;
 }
 
+.service-common-block {
+    min-width: 300px;
+    min-height: 200px;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 16px;
+    font-size: 1rem;
+}
+
+.service-p {
+    /* width: 100%; */
+    padding: 16px;
+    font-size: 1rem;
+}
+
 .white-bg {
     background-color: whitesmoke;
 }
@@ -66,14 +81,6 @@ body {
     max-width: 90%;
     min-width: 100px;
 }
-
-/* #header-button1 {
-    
-} */
-
-/* #collaborate {
-
-} */
 
 #collaborate-block-wrap {
     grid-template-columns: repeat(2, 1fr);
@@ -148,4 +155,52 @@ body {
     margin-top: 16px;
     padding: 16px 48px;
     border-radius: 24px;
+}
+
+#service-block1 {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+#service-block1-h1 {
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 1.75rem;
+}
+
+#service-block2 {
+    display: grid;
+    grid-template-areas: 
+        "art1 art2 art5"
+        "art3 art4 art5";
+    gap: 24px;
+}
+
+#service-block2-art1 {
+    grid-area: art1;
+}
+#service-block2-art2 {
+    grid-area: art2
+}
+
+#service-block2-art3 {
+    grid-area: art3;
+}
+
+#service-block2-art4 {
+    grid-area: art4;
+}
+
+#service-block2-art5 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    grid-area: art5;
+}
+
+#service-block2-art5-img {
+    background-image: linear-gradient(to bottom, red, darkred);
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
 }
