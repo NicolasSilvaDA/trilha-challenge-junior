@@ -88,6 +88,29 @@ body {
     box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.2);
 }
 
+.pricing-h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 0;
+    text-indent: 18px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 1px 1px 5px rgba(5, 5, 5, 0.1);
+    font-size: 1rem;
+}
+
 .white-bg {
     background-color: whitesmoke;
 }
@@ -206,6 +229,7 @@ body {
 #service-block2-art1 {
     grid-area: art1;
 }
+
 #service-block2-art2 {
     grid-area: art2
 }
@@ -220,7 +244,6 @@ body {
 
 #service-block2-art5 {
     grid-area: art5;
-    display: block;
     min-width: 300px;
     min-height: 200px;
     max-width: 100%;
@@ -247,4 +270,71 @@ body {
     margin-bottom: 32px;
     font-weight: 500;
     font-size: 1.75rem;
+}
+
+#pricing-h1-2 {
+    color: #51850C;
+}
+
+#pricing-form {
+    margin-top: 24px;
+    padding: 32px;
+    box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.2);
+    border-radius: 16px;
+    display: grid;
+    grid-template-areas: 
+    "name email"
+    "project-type budget"
+    "describe describe";
+    gap: 12px;
+}
+
+#pricing-fullname {
+    grid-area: name;
+}
+
+#pricing-email {
+    grid-area: email;
+}
+
+#pricing-project-type {
+    grid-area: project-type;
+}
+
+#pricing-budget-range {
+    grid-area: budget;
+}
+
+#pricing-budget-range-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1 ,1fr);
+    gap: 12px;
+}
+
+/* #pricing-budget-input-1 {
+
+}
+
+#pricing-budget-input-2 {
+    
+} */
+
+#pricing-describe {
+    grid-area: describe;
+    width: 100%;
+}
+
+#pricing-describe-input {
+    height: 200px;
+    resize: none;
+    font-size: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#pricing-btn {
+    border-radius: 8px;
+    margin-top: 12px;
+    background-color: #A8FF36;
+    font-weight: 700;
 }
