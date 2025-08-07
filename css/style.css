@@ -31,6 +31,11 @@ body {
     display: grid;
 }
 
+.hidden {
+    display: none;
+    transition: all 0.5s ease-in-out 0.5s;
+}
+
 /* .content-section {
 
 } */
@@ -113,16 +118,29 @@ body {
 
 .list-element {
     margin: 36px 0;
-    padding: 12px;
+    padding: 16px 12px;
     border-radius: 12px;
+    border: 1px solid rgb(10, 10, 10);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 
+    "number cont button"
+    "p p p";
+    align-items: center;
+}
+
+.list-element::marker {
+    grid-area: number;
 }
 
 .list-element-showhide {
-    float: inline-end;
+    /* float: right; */
+    grid-area: button;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: rgb(10, 10, 10);
+    cursor: pointer;
 }
 
 .list-element-showhide-arrow {
@@ -134,13 +152,14 @@ body {
 }
 
 .list-element-h1 {
+    grid-area: cont;
     display: inline-block;
     font-size: 1.25rem;
     font-weight: 500;
 }
 
 .list-element-p {
-    display: none;
+    grid-area: p;
     padding: 12px 60px 0 0;
     font-size: 1.1rem;
     font-weight: 400;
@@ -382,7 +401,10 @@ body {
 }
 
 #faq-ol {
+    padding: 0 24px;
     list-style-position: inside;
+    box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.1);
+    border-radius: 12px;
 }
 
 #footer-article1-h1 {
@@ -445,4 +467,23 @@ body {
 #footer-article3-p2 {
     text-align: right;
     font-size: 0.9rem;
+}
+
+/* Responsivity and animations  */
+
+@keyframes hover-dropdown {
+    from {
+        background-color: rgb(10, 10, 10)
+    } to {
+        background-color: #A8FF36;
+    }
+}
+
+.dropdown:hover {
+    animation-name: hover-dropdown;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    /* background-color: #5700c9; Working with inverse of wanted color */
+    /* filter: invert(); */
 }
