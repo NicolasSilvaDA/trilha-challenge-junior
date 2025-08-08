@@ -6,6 +6,6 @@ divToggleParaSelect.forEach((elem) => {
         const arrowSelect = elem.parentElement.querySelector(".list-element-showhide-arrow");
 
         paragSelect.classList.toggle("hidden");
-        // arrowSelect.classList.
+        arrowSelect.classList.toggle("rotated");
     });
 });

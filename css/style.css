@@ -33,12 +33,7 @@ body {
 
 .hidden {
     display: none;
-    transition: all 0.5s ease-in-out 0.5s;
 }
-
-/* .content-section {
-
-} */
 
 .collaborate-element {
     padding: 12px 0;
@@ -129,10 +124,6 @@ body {
     align-items: center;
 }
 
-.list-element::marker {
-    grid-area: number;
-}
-
 .list-element-showhide {
     /* float: right; */
     grid-area: button;
@@ -149,6 +140,12 @@ body {
     background-image: url("../static/Arrow.png");
     background-position: center;
     background-repeat: no-repeat;
+    transition: transform 0.2s ease;
+    transform: rotate(0deg);
+}
+
+.list-element-showhide-arrow.rotated {
+    transform: rotate(180deg);
 }
 
 .list-element-h1 {
@@ -484,6 +481,4 @@ body {
     animation-timing-function: ease-in-out;
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
-    /* background-color: #5700c9; Working with inverse of wanted color */
-    /* filter: invert(); */
 }
