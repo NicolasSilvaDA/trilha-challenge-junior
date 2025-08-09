@@ -31,10 +31,6 @@ body {
     display: grid;
 }
 
-.hidden {
-    display: none;
-}
-
 .collaborate-element {
     padding: 12px 0;
 }
@@ -125,7 +121,6 @@ body {
 }
 
 .list-element-showhide {
-    /* float: right; */
     grid-area: button;
     width: 40px;
     height: 40px;
@@ -157,9 +152,16 @@ body {
 
 .list-element-p {
     grid-area: p;
-    padding: 12px 60px 0 0;
+    padding-right: 60px;
     font-size: 1.1rem;
     font-weight: 400;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease;
+}
+
+.list-element-p.expanded {
+    height: 100px;
 }
 
 .footer-article {
