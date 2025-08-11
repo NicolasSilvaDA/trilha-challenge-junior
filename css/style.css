@@ -184,6 +184,7 @@ body {
 .links {
     text-decoration: none;
     color: whitesmoke;
+    font-weight: 500;
 }
 
 #header-navbar {
@@ -478,9 +479,32 @@ body {
     }
 }
 
+@keyframes btn-hover {
+    from {
+        background-color: #A8FF36;
+        color: rgb(10, 10, 10);
+    } to {
+        background-color: #51850C;
+        color: whitesmoke;
+    }
+}
+
 .dropdown:hover {
     animation-name: hover-dropdown;
     animation-timing-function: ease-in-out;
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
+}
+
+.btn:hover {
+    cursor: pointer;
+    animation-name: btn-hover;
+    animation-timing-function: ease;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.links:hover {
+    color: #A8FF36;
+    transition: color 0.4s ease;
 }
