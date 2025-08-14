@@ -10,6 +10,7 @@ body {
 
 .padding-page {
     padding: 60px 200px;
+    transition: padding 0.4s ease-in-out;
 }
 
 .black-bg {
@@ -28,7 +29,6 @@ body {
 
 .block-wrap {
     padding: 30px 0;
-    display: grid;
 }
 
 .collaborate-element {
@@ -43,13 +43,14 @@ body {
 }
 
 .service-common-block {
-    padding: 20px;
-    min-width: 300px;
-    min-height: 200px;
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: auto;
     border-radius: 16px;
     font-size: 1rem;
+}
+
+.service-common-block-wrap {
+    padding: 20px;
 }
 
 .service-icon {
@@ -200,6 +201,7 @@ body {
 }
 
 #collaborate-block-wrap {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     gap: 12px;
@@ -240,6 +242,7 @@ body {
 }
 
 #about-block-wrap {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -274,6 +277,10 @@ body {
     border-radius: 24px;
 }
 
+#service-block-wrap {
+    display: grid;
+}
+
 #service-block1 {
     margin-bottom: 32px;
     text-align: center;
@@ -287,10 +294,10 @@ body {
 
 #service-block2 {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "art1 art2 art5"
         "art3 art4 art5";
-    gap: 24px;
+    gap: 20px;
 }
 
 #service-block2-art1 {
@@ -312,7 +319,7 @@ body {
 #service-block2-art5 {
     grid-area: art5;
     min-width: 300px;
-    min-height: 200px;
+    min-height: 250px;
     max-width: 100%;
     max-height: 100%;
     border-radius: 16px;
@@ -507,4 +514,17 @@ body {
 .links:hover {
     color: #A8FF36;
     transition: color 0.4s ease;
+}
+
+@media(max-width: 1000px) {
+    .padding-page {
+        padding: 20px 80px;
+    }
+
+    #service-block2 {
+        grid-template-areas: 
+        "art1 art2"
+        "art3 art4"
+        "art5 art5"; 
+    }
 }
