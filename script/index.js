@@ -22,3 +22,10 @@ divToggleParaSelect.forEach((elem) => {
         }
     });
 });
+
+const barMenuEl = document.querySelector(".bar-menu");
+const menuEl = document.querySelector('#links-group');
+
+barMenuEl.addEventListener("click", () => {
+    menuEl.classList.toggle("out-of-screen");
+});

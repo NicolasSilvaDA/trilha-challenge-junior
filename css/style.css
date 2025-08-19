@@ -31,6 +31,10 @@ body {
     padding: 30px 0;
 }
 
+.bar-menu {
+    display: none;
+}
+
 .collaborate-element {
     padding: 12px 0;
 }
@@ -200,15 +204,21 @@ body {
 }
 
 #header-navbar {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: space-between;
 }
 
 #logo {
-    max-width: 90%;
-    min-width: 100px;
+    max-width: 20%;
+    min-width: 150px;
+}
+
+#links-group {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 0.9;
 }
 
 #collaborate-block-wrap {
@@ -345,8 +355,8 @@ body {
 
 #portfolio-blocks {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 24px;
 }
 
@@ -526,6 +536,8 @@ body {
     transition: color 0.4s ease;
 }
 
+/* screen responsivity */
+
 @media(max-width: 1000px) {
     .padding-page {
         padding: 20px 80px;
@@ -549,4 +561,72 @@ body {
         "art3 art4"
         "art5 art5"; 
     }
+
+    #portfolio-blocks {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
+
+@media(max-width: 800px) {
+    body {
+        padding-top: 60px;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        z-index: 9;
+    }
+
+    #header-navbar {
+        padding: 20px 30px;
+        align-items: center;
+    }
+
+    .bar-menu {
+        display: block;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+    }
+
+    .bar {
+        margin: 5px 0;
+        height: 3px;
+        width: 25px;
+        background-color: whitesmoke;
+    }
+
+    .bar-menu:hover {
+        opacity: 1;
+    }
+
+    #links-group {
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(10, 10, 10);
+        transform: translateX(125%);
+        transition: all 0.3s ease-in-out;
+        padding: 20px 0;
+    }
+
+    #links-group.out-of-screen {
+        transform: translateX(0);
+    }
+
+    .links {
+        padding: 16px 0;
+    }
+
+    #header-button {
+        margin: 8px 0;
+        width: 400px;
+    }
+
+
 }
