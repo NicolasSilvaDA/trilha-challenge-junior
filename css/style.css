@@ -43,18 +43,12 @@ body {
     width: 250px;
     height: 250px;
     border-radius: 16px;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
 }
 
 .img-rotated {
     transform-origin: bottom right;
     left: 100px;
     transform: rotate(9deg);
-    transition: top 0.1s ease-in-out, left 0.1s ease-in-out, position 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 .service-common-block {
@@ -223,8 +217,8 @@ body {
 
 #collaborate-block-wrap {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: 
+    "col-text col-img";
     align-items: center;
     justify-items: center;
     gap: 12px;
@@ -245,25 +239,35 @@ body {
     margin-top: 8px;
 }
 
+#collaborate-block1 {
+    padding-right: 50px; 
+    grid-area: col-text;
+}
+
 #collaborate-block2 {
-    width: 50%;
-    height: 75%;
+    grid-area: col-img;
+    /* height: 75%; */
     position: relative;
+    padding-right: 65px; 
 }
 
 #collaborate-img1 {
-    background: linear-gradient(#51850C, #A8FF36);
-    z-index: 1;
+    background: linear-gradient(red, darkred);
+    z-index: 2;
+    position: absolute;
 }
 
 #collaborate-img2 {
-    background: linear-gradient(red, darkred);
-    z-index: 2;
+    background: linear-gradient(#51850C, #A8FF36);
+    z-index: 1;
+    position: relative;
 }
 
 #about-block-wrap {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-areas: 
+    "about-txt about-img";
 }
 
 #about-img1 {
@@ -276,7 +280,12 @@ body {
     border-radius: 16px;
 }
 
+#about-block1 {
+    grid-area: about-img;
+}
+
 #about-block2 {
+    grid-area: about-txt;
     padding: 0 48px;
 }
 
@@ -540,7 +549,7 @@ body {
 
 @media(max-width: 1000px) {
     .padding-page {
-        padding: 20px 80px;
+        padding: 20px 60px;
     }
 
     .collaborate-img {
@@ -579,6 +588,10 @@ body {
         z-index: 9;
     }
 
+    .padding-page {
+        padding: 15px 45px;
+    }
+
     #header-navbar {
         padding: 20px 30px;
         align-items: center;
@@ -603,6 +616,7 @@ body {
     }
 
     #links-group {
+        display: flex;
         flex-direction: column;
         align-items: center;
         position: fixed;
@@ -611,7 +625,7 @@ body {
         width: 100%;
         background-color: rgb(10, 10, 10);
         transform: translateX(125%);
-        transition: all 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
         padding: 20px 0;
     }
 
@@ -628,5 +642,58 @@ body {
         width: 400px;
     }
 
+    #collaborate-block-wrap {
+        grid-template-areas: 
+        "col-img"
+        "col-text";
+    }
+    
+    #collaborate-block2 {
+        width: 100%;
+    }
+
+    #collaborate-img1 {
+        width: 100%;
+    }
+
+    #collaborate-img2 {
+        width: 0;
+    }
+
+    #about {
+        background-image: url("../static/about-img.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #about-block-wrap {
+        grid-template-areas: "about-txt about-txt";
+    }
+
+    #about-block1 {
+        display: none;
+    }
+
+    #about-block2 {
+        padding: 25px 50px;
+        /* width: 100%; */
+        background-color: rgba(245, 245, 245, 0.8);
+        border-radius: 16px;
+    }
+
+    #about-btn {
+        width: 100%;
+    }
+
+    #pricing-form {
+        grid-template-areas: 
+        "name"
+        "email"
+        "project-type"
+        "budget"
+        "describe";
+    }
 
 }
