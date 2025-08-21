@@ -265,15 +265,14 @@ body {
 
 #about-block-wrap {
     display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
-    grid-template-areas: 
-    "about-txt about-img";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "about-img about-txt";
 }
 
 #about-img1 {
     width: 100%;
     height: 100%;
-    background-image:url("../static/about-img.jpg");
+    background-image: url("../static/about-img.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -286,7 +285,7 @@ body {
 
 #about-block2 {
     grid-area: about-txt;
-    padding: 0 48px;
+    padding: 0 36px 0 24px;
 }
 
 #about-h1 {
@@ -375,6 +374,14 @@ body {
     font-size: 1.75rem;
 }
 
+#pricing {
+    background-image: url("../static/form-bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #pricing-h1-2 {
     color: #51850C;
 }
@@ -390,6 +397,7 @@ body {
     "project-type budget"
     "describe describe";
     gap: 12px;
+    background-color: rgba(245, 245, 245, 0.95);
 }
 
 #pricing-fullname {
@@ -547,7 +555,11 @@ body {
 
 /* screen responsivity */
 
-@media(max-width: 1000px) {
+@media(max-width: 1100px) {
+    * {
+        font-size: 95%;
+    }
+
     .padding-page {
         padding: 20px 60px;
     }
@@ -562,6 +574,33 @@ body {
         transform: rotate(9deg);
         left: 50px;
         top: -5px;
+    }
+
+    #about {
+        background-image: url("../static/about-img.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #about-block-wrap {
+        grid-template-areas: "about-txt about-txt";
+    }
+
+    #about-block1 {
+        display: none;
+    }
+
+    #about-block2 {
+        padding: 25px 50px;
+        /* width: 100%; */
+        background-color: rgba(245, 245, 245, 0.8);
+        border-radius: 16px;
+    }
+
+    #about-btn {
+        width: 100%;
     }
 
     #service-block2 {
@@ -660,32 +699,7 @@ body {
         width: 0;
     }
 
-    #about {
-        background-image: url("../static/about-img.jpg");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
 
-    #about-block-wrap {
-        grid-template-areas: "about-txt about-txt";
-    }
-
-    #about-block1 {
-        display: none;
-    }
-
-    #about-block2 {
-        padding: 25px 50px;
-        /* width: 100%; */
-        background-color: rgba(245, 245, 245, 0.8);
-        border-radius: 16px;
-    }
-
-    #about-btn {
-        width: 100%;
-    }
 
     #pricing-form {
         grid-template-areas: 
@@ -696,4 +710,7 @@ body {
         "describe";
     }
 
+    #footer-section {
+        padding-bottom: 24px;
+    }
 }
